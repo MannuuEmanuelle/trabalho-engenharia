@@ -1,4 +1,4 @@
-public class ComissaoSenior implements InterfaceComissao {
+public class ComissaoSenior implements CalculoComissao {
 
     @Override
     public double calcular(double valor){

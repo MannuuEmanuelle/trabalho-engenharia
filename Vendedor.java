@@ -1,13 +1,15 @@
 public class Vendedor {
     private String nome;
-    private InterfaceComissao comissao;
+    private Double valorVenda;
+    private CalculoComissao comissao;
     
-    public Vendedor(String nome, InterfaceComissao comissao){
+    public Vendedor(String nome, double valorVenda, CalculoComissao comissao){
         this.nome = nome;
+        this.valorVenda = valorVenda;
         this.comissao = comissao;
     }
 
-    public void setComissao (InterfaceComissao comissao){
+    public void setComissao (CalculoComissao comissao){
         this.comissao = comissao;
     }
 
@@ -23,7 +25,10 @@ public class Vendedor {
         this.nome = nome;
     }
 
-    public InterfaceComissao getComissao() {
+    public double getValorVenda(){
+        return valorVenda;
+    }
+    public CalculoComissao getComissao() {
         return comissao;
     }
     
