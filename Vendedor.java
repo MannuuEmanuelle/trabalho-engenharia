@@ -3,7 +3,7 @@ public class Vendedor {
     private Double valorVenda;
     private CalculoComissao comissao;
     
-    public Vendedor(String nome, double valorVenda, CalculoComissao comissao){
+    public Vendedor(String nome, Double valorVenda, CalculoComissao comissao){
         this.nome = nome;
         this.valorVenda = valorVenda;
         this.comissao = comissao;
@@ -13,8 +13,8 @@ public class Vendedor {
         this.comissao = comissao;
     }
 
-    public double calcularComissao(double valor){
-        return comissao.calcular(valor);
+    public Double calcularComissao(Double valorVenda){
+        return comissao.calcular(valorVenda);
     }
 
     public String getNome() {
@@ -25,7 +25,7 @@ public class Vendedor {
         this.nome = nome;
     }
 
-    public double getValorVenda(){
+    public Double getValorVenda(){
         return valorVenda;
     }
     public CalculoComissao getComissao() {
