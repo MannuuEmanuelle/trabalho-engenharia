@@ -17,15 +17,16 @@ public class Main {
         System.out.print("Digite o valor do venda: ");
         Double venda = scanner.nextDouble();
 
-        if (senioridade == 1) {
-            Vendedor vendedor01 = new Vendedor(nome, venda, comissaoSenior);
-            System.out.println("Vendedor: "+ vendedor01.getNome() + "\nComissão da venda: " + vendedor01.calcularComissao(venda));
-            
-        } else if (senioridade == 2) {
-            Vendedor vendedor02 = new Vendedor(nome, venda, comissaoJunior);
-            System.out.println("Vendedor: "+ vendedor02.getNome() + "\nComissão da venda: " + vendedor02.calcularComissao(venda));
-        } else {
-            System.out.println("Valor inválido!");
-        } 
+        switch (senioridade) {
+            case 1 -> {
+                Vendedor vendedor01 = new Vendedor(nome, venda, comissaoSenior);
+                System.out.println("\nVendedor: "+ vendedor01.getNome() + "\nComissão da venda: " + vendedor01.calcularComissao(venda));
+            }
+            case 2 -> {
+                Vendedor vendedor02 = new Vendedor(nome, venda, comissaoJunior);
+                System.out.println("\nVendedor: "+ vendedor02.getNome() + "\nComissão da venda: " + vendedor02.calcularComissao(venda));
+            }
+            default -> System.out.println("Valor inválido!");
+        }
     }
 }
